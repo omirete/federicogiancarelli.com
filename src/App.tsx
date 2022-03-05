@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './sections/Header'
+import About from './sections/About'
+import ActionButtons from './sections/ActionButtons'
+import Footer from './sections/Footer'
+import LanguageSelector from './components/LanguageSelector'
+import LangContext from './contexts/LangContext'
+import SectionDivider from 'components/SectionDivider'
+import useLanguage from 'hooks/useLanguage'
 
 function App() {
+  const [language, setLanguage] = useLanguage()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <LangContext.Provider value={language}>
+      <div lang={language._xml_lang_code} className="w-100 row g-0 py-4 px-3 justify-content-center app-background">
+        <div className="col-sm-12 col-md-10 col-lg-8">
+          <div className="min-vh-100 d-flex flex-column">
+            <LanguageSelector setLanguage={setLanguage} />
+            <Header />
+          </div>
+          <About />
+          <SectionDivider />
+          <ActionButtons />
+          <Footer />
+        </div>
+      </div>
+    </LangContext.Provider>
+  )
 }
 
-export default App;
+export default App
