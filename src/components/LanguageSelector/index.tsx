@@ -1,18 +1,13 @@
-import {
-  Dispatch,
-  Fragment,
-  SetStateAction,
-  useContext,
-} from 'react'
-import LangContext, { availableLanguages } from 'contexts/LangContext'
-import Lang from 'lang/Lang'
+import { Dispatch, Fragment, SetStateAction, useContext } from "react";
+import LangContext, { availableLanguages } from "contexts/LangContext";
+import Lang from "lang/Lang";
 
 export interface LanguageSelectorProps {
-  setLanguage: Dispatch<SetStateAction<string>>
+  setLanguage: Dispatch<SetStateAction<string>>;
 }
 
 const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
-  const lang: Lang = useContext(LangContext)
+  const lang: Lang = useContext(LangContext);
   return (
     <div className="d-flex justify-content-center">
       <div
@@ -21,7 +16,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
         aria-label={lang.text.ariaLabel_language_selector}
       >
         {availableLanguages.map((avLang) => {
-          const isActive = lang._code === avLang._code
+          const isActive = lang._code === avLang._code;
           return (
             <Fragment>
               <input
@@ -38,7 +33,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
                   transition-all
                   py-1 px-2 me-1
                   bg-white rounded
-                  ${isActive ? 'bg-opacity-50' : 'bg-opacity-0'}
+                  ${isActive ? "bg-opacity-50" : "bg-opacity-0"}
                   bg-opacity-75-hover text-dark-hover
                   text-white small
                   d-flex flex-row flex-nowrap align-items-center
@@ -49,11 +44,11 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
                 <div className="ms-1 d-none d-sm-block">{avLang._name}</div>
               </label>
             </Fragment>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LanguageSelector
+export default LanguageSelector;

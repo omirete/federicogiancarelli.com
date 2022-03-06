@@ -37,152 +37,153 @@ $purple: rgb(143, 28, 196);
 $white: rgb(255, 255, 255);
 
 $theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark,
-  "purple":     $purple,
-  "white":      $white
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "purple": $purple,
+  "white": $white,
 );
 
 $utilities: map-merge(
-    $utilities,
-    (
-        "fill": (
-            property: fill,
-            class: fill,
-            state: hover,
-            responsive: false,
-            values: $theme-colors,
-        ),
-        "stroke": (
-            property: stroke,
-            class: stroke,
-            responsive: false,
-            values: $theme-colors,
-        ),
-        "viewport-height": (
-            property: height,
-            responsive: true,
-            class: vh,
-            values: (
-                25: 25vh,
-                50: 50vh,
-                75: 75vh,
-                100: 100vh,
-            ),
-        ),
-        "viewport-width": (
-            property: width,
-            responsive: true,
-            class: vw,
-            values: (
-                25: 25vw,
-                50: 50vw,
-                75: 75vw,
-                100: 100vw,
-            ),
-        ),
-        "min-viewport-height": (
-            property: min-height,
-            class: min-vh,
-            values: (
-                25: 25vh,
-                50: 50vh,
-                75: 75vh,
-                100: 100vh,
-            ),
-        ),
-        "min-viewport-width": (
-            property: min-width,
-            class: min-vw,
-            values: (
-                25: 25vw,
-                50: 50vw,
-                75: 75vw,
-                100: 100vw,
-            ),
-        ),
-        "max-viewport-height": (
-            property: max-height,
-            class: max-vh,
-            values: (
-                25: 25vh,
-                50: 50vh,
-                75: 75vh,
-                100: 100vh,
-            ),
-        ),
-        "max-viewport-width": (
-            property: max-width,
-            class: max-vw,
-            values: (
-                25: 25vw,
-                50: 50vw,
-                75: 75vw,
-                100: 100vw,
-            ),
-        ),
-        "width":
+  $utilities,
+  (
+    "fill": (
+      property: fill,
+      class: fill,
+      state: hover,
+      responsive: false,
+      values: $theme-colors,
+    ),
+    "stroke": (
+      property: stroke,
+      class: stroke,
+      responsive: false,
+      values: $theme-colors,
+    ),
+    "viewport-height": (
+      property: height,
+      responsive: true,
+      class: vh,
+      values: (
+        25: 25vh,
+        50: 50vh,
+        75: 75vh,
+        100: 100vh,
+      ),
+    ),
+    "viewport-width": (
+      property: width,
+      responsive: true,
+      class: vw,
+      values: (
+        25: 25vw,
+        50: 50vw,
+        75: 75vw,
+        100: 100vw,
+      ),
+    ),
+    "min-viewport-height": (
+      property: min-height,
+      class: min-vh,
+      values: (
+        25: 25vh,
+        50: 50vh,
+        75: 75vh,
+        100: 100vh,
+      ),
+    ),
+    "min-viewport-width": (
+      property: min-width,
+      class: min-vw,
+      values: (
+        25: 25vw,
+        50: 50vw,
+        75: 75vw,
+        100: 100vw,
+      ),
+    ),
+    "max-viewport-height": (
+      property: max-height,
+      class: max-vh,
+      values: (
+        25: 25vh,
+        50: 50vh,
+        75: 75vh,
+        100: 100vh,
+      ),
+    ),
+    "max-viewport-width": (
+      property: max-width,
+      class: max-vw,
+      values: (
+        25: 25vw,
+        50: 50vw,
+        75: 75vw,
+        100: 100vw,
+      ),
+    ),
+    "width":
+      map-merge(
+        map-get($utilities, "width"),
+        (
+          responsive: true,
+          values:
             map-merge(
-                map-get($utilities, "width"),
-                (
-                    responsive: true,
-                    values:
-                        map-merge(
-                            map-get(map-get($utilities, "width"), "values"),
-                            (
-                                20: 20%,
-                            )
-                        ),
-                )
+              map-get(map-get($utilities, "width"), "values"),
+              (
+                20: 20%,
+              )
             ),
-        "bg-opacity": (
-            css-var: true,
-            class: bg-opacity,
-            state: hover,
-            values: (
-                0: 0,
-                25: .25,
-                50: .5,
-                75: .75,
-                100: 1,
-            )
-        ),
-        "opacity": (
-            property: opacity,
-            class: opacity,
-            state: hover,
-            values: (
-                0: 0,
-                25: .25,
-                50: .5,
-                75: .75,
-                100: 1,
-            )
-        ),
-        "shadow": (
-            property: box-shadow,
-            class: shadow,
-            state: hover,
-            values: (
-              null: $box-shadow,
-              sm: $box-shadow-sm,
-              lg: $box-shadow-lg,
-              none: none,
-            )
-          ),
-        "color": map-merge(
-            map-get($utilities, "color"),
-            (
-                state: hover
-            ),
-        ),
-    )
+        )
+      ),
+    "bg-opacity": (
+      css-var: true,
+      class: bg-opacity,
+      state: hover,
+      values: (
+        0: 0,
+        25: 0.25,
+        50: 0.5,
+        75: 0.75,
+        100: 1,
+      ),
+    ),
+    "opacity": (
+      property: opacity,
+      class: opacity,
+      state: hover,
+      values: (
+        0: 0,
+        25: 0.25,
+        50: 0.5,
+        75: 0.75,
+        100: 1,
+      ),
+    ),
+    "shadow": (
+      property: box-shadow,
+      class: shadow,
+      state: hover,
+      values: (
+        null: $box-shadow,
+        sm: $box-shadow-sm,
+        lg: $box-shadow-lg,
+        none: none,
+      ),
+    ),
+    "color":
+      map-merge(
+        map-get($utilities, "color"),
+        (
+          state: hover,
+        )
+      ),
+  )
 );
 
 // 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
@@ -190,20 +191,27 @@ $utilities: map-merge(
 
 // 6. Add additional custom code here
 .app-background {
-    background-image: linear-gradient(to right top, #3b4969, #7a5283, #be5678, #e3704f, #d7a319);
+  background-image: linear-gradient(
+    to right top,
+    #3b4969,
+    #7a5283,
+    #be5678,
+    #e3704f,
+    #d7a319
+  );
 }
 
 .transition-all {
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .fill-inherit {
-    fill: inherit;
+  fill: inherit;
 }
 
 .pointer-hover:hover {
-    cursor: pointer;
+  cursor: pointer;
 }

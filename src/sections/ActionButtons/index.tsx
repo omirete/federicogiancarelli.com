@@ -1,17 +1,18 @@
-import { useContext } from 'react'
-import ActionButton from 'components/ActionButton'
-import LangContext from 'contexts/LangContext'
-import {ReactComponent as IconDownload} from 'assets/icons/download.svg'
+import { useContext } from "react";
+import ActionButton from "components/ActionButton";
+import LangContext from "contexts/LangContext";
+import { ReactComponent as IconDownload } from "assets/icons/download.svg";
 // import {ReactComponent as IconBoxArrowRight} from 'assets/icons/box_arrow_right.svg'
-import {ReactComponent as IconAutomatica} from 'assets/icons/logo_automatica.svg'
-import {ReactComponent as IconTuturno} from 'assets/icons/logo_tuturno.svg'
-import {ReactComponent as IconBook} from 'assets/icons/book.svg'
-import {ReactComponent as IconLinkedin} from 'assets/icons/linkedin.svg'
+import { ReactComponent as IconAutomatica } from "assets/icons/logo_automatica.svg";
+import { ReactComponent as IconTuturno } from "assets/icons/logo_tuturno.svg";
+import { ReactComponent as IconBook } from "assets/icons/book.svg";
+import { ReactComponent as IconLinkedin } from "assets/icons/linkedin.svg";
 
 const ActionButtons: React.FC = () => {
-  const lang = useContext(LangContext)
-  const btnClasses = "btn btn-dark border-0 bg-white bg-opacity-25 bg-opacity-75-hover text-dark-hover text-white mb-3 shadow-sm fill-light fill-dark-hover"
-  const iconClasses = 'fill-inherit transition-all'
+  const lang = useContext(LangContext);
+  const btnClasses =
+    "btn btn-dark border-0 bg-white bg-opacity-25 bg-opacity-75-hover text-dark-hover text-white mb-3 shadow-sm fill-light fill-dark-hover";
+  const iconClasses = "fill-inherit transition-all";
   return (
     <div className="d-flex flex-column mt-4">
       <ActionButton
@@ -56,7 +57,7 @@ const ActionButtons: React.FC = () => {
         target="_blank"
       />
     </div>
-  )
-}
+  );
+};
 
-export default ActionButtons
+export default ActionButtons;
