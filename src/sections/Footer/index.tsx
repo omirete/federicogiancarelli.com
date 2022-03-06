@@ -6,9 +6,9 @@ import LangContext from 'contexts/LangContext'
 const Footer: React.FC = () => {
   const lang = useContext(LangContext)
   return (
-    <div className="text-decoration-none me-2 mt-3 text-center">
+    <div className="text-decoration-none mt-4 text-center">
       <SocialRow
-        className="ms-2 h3"
+        className="h3"
         iconClassName="fill-white opacity-50 opacity-100-hover transition-all"
       />
       <Signature className="mt-4 opacity-50" style={{ fill: '#ffffff' }} />

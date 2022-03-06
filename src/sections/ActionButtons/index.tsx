@@ -24,6 +24,14 @@ const ActionButtons: React.FC = () => {
         target="_blank"
       />
       <ActionButton
+        href={lang.text.url_linkedin}
+        className={btnClasses}
+        text={lang.text.lets_connect_in_linkedin}
+        icon={<IconLinkedin className={iconClasses} />}
+        role="button"
+        target="_blank"
+      />
+      <ActionButton
         href={lang.text.url_automatica}
         className={btnClasses}
         text={lang.text.visit_website_automatica}
@@ -44,14 +52,6 @@ const ActionButtons: React.FC = () => {
         className={btnClasses}
         text={lang.text.read_more_about_experience_germany}
         icon={<IconBook className={iconClasses} />}
-        role="button"
-        target="_blank"
-      />
-      <ActionButton
-        href={lang.text.url_linkedin}
-        className={btnClasses}
-        text={lang.text.lets_connect_in_linkedin}
-        icon={<IconLinkedin className={iconClasses} />}
         role="button"
         target="_blank"
       />

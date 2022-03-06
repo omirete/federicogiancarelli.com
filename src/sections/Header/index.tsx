@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   return (
     <div className="mt-4 d-flex flex-column flex-fill">
       <AudioPlayer
-        title="Escuchame!"
+        title={lang.text.press_play_and_listen_to_me}
         url="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
         className="text-white bg-white bg-opacity-25 rounded w-100 mt-4"
       >
@@ -24,7 +24,7 @@ const Header: React.FC = () => {
             className="rounded shadow-sm"
           />
           <div className="ms-2 flex-fill">
-            <h5 className="mb-0">{lang.text.my_own_full_name}</h5>
+            <h5 className="mb-0 d-flex flex-row flex-nowrap align-items-center">{lang.text.my_own_full_name}</h5>
             <h6 className="mb-1">{lang.text.profile_card_subtitle}</h6>
             <p className="mb-0">{lang.text.profile_card_job_title}</p>
           </div>

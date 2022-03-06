@@ -14,14 +14,13 @@ const es: Lang = {
     my_own_first_name: 'Federico',
     my_own_last_name: 'Giancarelli',
     my_own_full_name: 'Federico Giancarelli',
+    profile: 'Perfil',
     about_me: 'Acerca de mí',
-    about_1: 'Mi felicidad se construye a partir de mi familia, de los desafíos y de las cosas que aprendo.',
+    about_1: 'Construyo mi felicidad a partir de mi familia, de los desafíos y de las cosas que aprendo.',
     about_2: 'Constantemente busco incorporar habilidades nuevas y disfruto mucho de poder aplicarlas luego en mi trabajo y en mis proyectos.',
-    about_3: 'Vivimos en el futuro y, por eso, la tecnología es una de mis herramientas principales. Con ella me abro caminos para lograr siempre mis objetivos.',
-    about_4: 'He vivido, estudiado y trabajado en Argentina, en Alemania, en Suiza y en España. Estas experiencias me enriquecieron de muchas formas, pero lo que más valoro es haber podido entrar en contacto con personas y culturas de todo el mundo.',
-    about_4_extra: 'Durante un año viví en Stuttgart, Alemania, en donde estudié y trabajé para MAHLE, una empresa de la industria automotriz y otro en Suiza (Zúrich), en donde estudié y trabajé',
-    about_5: 'Algo de tuturno y de automática',
-    about_6: '',
+    about_5: 'Vivimos en el futuro, por lo que la tecnología es una de mis herramientas principales. Con ella me abro caminos para lograr siempre mis objetivos.',
+    about_6: 'He vivido, estudiado y trabajado en Argentina, en Alemania, en Suiza y en España. Estas experiencias me enriquecieron de muchas formas, pero lo que más valoro es haber podido entrar en contacto con personas y culturas de todo el mundo. Eso solo ya me hizo una mejor persona.',
+    // about_6_extra: 'Durante un año viví en Stuttgart, Alemania, en donde estudié y trabajé para MAHLE, una empresa de la industria automotriz y otro en Suiza (Zúrich), en donde estudié y trabajé',
     url_linkedin: 'https://www.linkedin.com/in/fgiancarelli/?locale=es_ES',
     url_automatica: 'https://automaticaconsultora.com/es',
     url_tuturno: 'https://tuturno.com.ar',
@@ -30,10 +29,13 @@ const es: Lang = {
     visit_website_automatica: 'Visita el sitio de Automatica',
     visit_website_tuturno: 'Visita el sitio de Tuturno',
     read_more_about_experience_germany: 'Lee más acerca de mi tiempo en Alemania',
-    lets_connect_in_linkedin: 'Conectemos en Linkedin!'
+    lets_connect_in_linkedin: 'Conectemos en Linkedin!',
+    press_play_and_listen_to_me: '¡Toca el botón de reproducir para escucharme hablar!'
   },
   el: {
-    view_sourcecode_in_github: <p>Mira el código de esta web en <a href="https://github.com/omirete/federicogiancarelli.com" target="_blank" rel="noreferrer" className="link-dark"><b>GitHub</b></a>!'</p>
+    view_sourcecode_in_github: <p>Código disponible en <a href="https://github.com/omirete/federicogiancarelli.com" target="_blank" rel="noreferrer" className="link-dark"><b>GitHub</b></a>!</p>,
+    about_3: <span>Siempre hay una manera más simple de hacer las cosas. Por eso comencé <a href="https://automaticaconsultora.com" target="_blank" rel="noreferrer" className="link-dark">Automatica</a>, una consultora de modernización y automatización.</span>,
+    about_4: <span>Junto con mi hermano desarrollamos <a href="https://tuturno.com.ar" target="_blank" rel="noreferrer" className="link-dark">Tuturno</a>, una plataforma web para gestionar reservas/citas en gimnasios, consultorios, peluquerías y mucho más!</span>,
   }
 }
 
