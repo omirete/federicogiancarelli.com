@@ -39,7 +39,7 @@ const Header: React.FC = () => {
         />
         <SocialRow className="h3 text-decoration-none ms-2 me-2 mt-3 text-center" />
       </div>
-      <div className="d-flex flex-column align-items-center justify-content-center mt-4 mb-5 pb-5 mb-md-3 pb-md-3">
+      <div className="d-flex flex-column align-items-center justify-content-center my-5">
         <div className="text-light opacity-75 text-center">
           {lang.text.scroll_down_to_see_more}
         </div>
