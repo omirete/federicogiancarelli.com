@@ -40,7 +40,11 @@ const de: Lang = {
       "Drücke aufs Play Knopf und höre meine Stimme zu!",
   },
   el: {
-    profile_card_subtitle: <span>Entrepreneur <IconRocket style={{width: '1em', height: '1em'}} /></span>,
+    profile_card_subtitle: (
+      <span>
+        Entrepreneur <IconRocket style={{ width: "1em", height: "1em" }} />
+      </span>
+    ),
     view_sourcecode_in_github: (
       <p>
         Quellcode auf{" "}

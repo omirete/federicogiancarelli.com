@@ -41,7 +41,11 @@ const es: Lang = {
       "¡Toca el botón de reproducir para escucharme hablar!",
   },
   el: {
-    profile_card_subtitle: <span>Emprendedor <IconRocket style={{width: '1em', height: '1em'}} /></span>,
+    profile_card_subtitle: (
+      <span>
+        Emprendedor <IconRocket style={{ width: "1em", height: "1em" }} />
+      </span>
+    ),
     view_sourcecode_in_github: (
       <p>
         Código disponible en{" "}
