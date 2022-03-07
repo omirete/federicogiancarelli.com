@@ -27,7 +27,7 @@ const Header: React.FC = () => {
             <h5 className="mb-0 d-flex flex-row flex-nowrap align-items-center">
               {lang.text.my_own_full_name}
             </h5>
-            <h6 className="mb-1">{lang.text.profile_card_subtitle}</h6>
+            <h6 className="mb-1">{lang.el.profile_card_subtitle}</h6>
             <p className="mb-0">{lang.text.profile_card_job_title}</p>
           </div>
         </div>

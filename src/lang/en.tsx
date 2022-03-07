@@ -1,5 +1,6 @@
 import Lang from "./Lang";
 import { ReactComponent as IconFlagUK } from "assets/twemoji/flag_uk.svg";
+import { ReactComponent as IconRocket } from "assets/twemoji/rocket-non-official.svg";
 
 const en: Lang = {
   _code: "en",
@@ -38,6 +39,7 @@ const en: Lang = {
       "Press the play button and listen to my voice!",
   },
   el: {
+    profile_card_subtitle: <span>Entrepreneur <IconRocket style={{width: '1em', height: '1em'}} /></span>,
     view_sourcecode_in_github: (
       <p>
         Source code available in{" "}
