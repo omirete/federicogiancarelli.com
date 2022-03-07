@@ -1,27 +1,35 @@
-import { HTMLProps } from "react";
-import useAudioPlayer from "./useAudioPlayer";
-import { ReactComponent as IconPlay } from "assets/material/play_circle.svg";
-import { ReactComponent as IconPause } from "assets/material/pause_circle.svg";
+import { HTMLProps, useState } from 'react'
+import useAudio from './useAudio'
+import { ReactComponent as IconPlay } from 'assets/material/play_circle.svg'
+import { ReactComponent as IconPause } from 'assets/material/pause_circle.svg'
 
 export interface AudioPlayerProps extends HTMLProps<HTMLDivElement> {
-  title: string;
-  url: string;
+  title: string
+  url: string
 }
 
-const PlayPauseButton: React.FC<{
-  playing: boolean;
-  toggleHandler: () => void;
-}> = ({ playing, toggleHandler }) => {
+const PlayPauseButton: React.FC<{ audio: HTMLAudioElement }> = ({ audio }) => {
+  const [playing, setPlaying] = useState(false)
   const iconClasses =
-    "d-block pointer-hover transition-all fill-white opacity-75 opacity-100-hover";
-  const iconStyles = { width: "5ch", height: "5ch" };
+    'd-block pointer-hover transition-all fill-white opacity-75 opacity-100-hover'
+  const iconStyles = { width: '5ch', height: '5ch' }
   return (
-    <div onClick={toggleHandler}>
+    <div
+      onClick={() => {
+        if (playing) {
+          audio.pause()
+          setPlaying(false)
+        } else {
+          audio.play()
+          setPlaying(true)
+        }
+      }}
+    >
       {playing && <IconPause className={iconClasses} style={iconStyles} />}
       {!playing && <IconPlay className={iconClasses} style={iconStyles} />}
     </div>
-  );
-};
+  )
+}
 
 const AudioPlayer: React.FC<AudioPlayerProps> = ({
   url,
@@ -30,7 +38,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
   style,
   ...props
 }) => {
-  const [playing, progress, toggle] = useAudioPlayer(url);
+  const [audio, progress] = useAudio(url)
   return (
     <div
       {...props}
@@ -40,34 +48,34 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
         justify-content-center
         ${className}
       `}
-      style={{ minWidth: "25%", ...style }}
+      style={{ minWidth: '25%', ...style }}
     >
       <div className="w-100 h-100 d-flex flex-row">
         <div className="flex-fill">{children}</div>
         <div className="d-flex flex-column align-items-start d-none d-sm-block">
-          <PlayPauseButton playing={playing} toggleHandler={toggle} />
+          <PlayPauseButton audio={audio} />
         </div>
       </div>
       <div className="d-flex flex-row mt-2 align-items-center">
         <div className="d-sm-none me-2">
-          <PlayPauseButton playing={playing} toggleHandler={toggle} />
+          <PlayPauseButton audio={audio} />
         </div>
         <div
           className="w-100 bg-dark bg-opacity-25 flex-fill"
-          style={{ minHeight: "7px", maxHeight: "21px" }}
+          style={{ minHeight: '7px', maxHeight: '21px' }}
         >
           <div
             className="bg-dark"
             style={{
-              minHeight: "7px",
-              maxHeight: "21px",
-              width: progress * 100 + "%",
+              minHeight: '7px',
+              maxHeight: '21px',
+              width: progress * 100 + '%',
             }}
           ></div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AudioPlayer;
+export default AudioPlayer
