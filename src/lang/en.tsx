@@ -26,6 +26,7 @@ const en: Lang = {
     about_6:
       "I have lived, studied and worked in Argentina, Germany, Switzerland and Spain. These experiences have been absolutely enriching for me in plenty of ways, but the thing I value the most is having been able to get in touch with people and cultures from around the world. This alone has made me a better person.",
     // about_6_extra: 'Durante un año viví en Stuttgart, Alemania, en donde estudié y trabajé para MAHLE, una empresa de la industria automotriz y otro en Suiza (Zúrich), en donde estudié y trabajé',
+    url_recording: "recordings/en.m4a",
     url_linkedin: "https://www.linkedin.com/in/fgiancarelli/?locale=en_US",
     url_automatica: "https://automaticaconsultora.com/en",
     url_tuturno: "https://tuturno.com.ar",

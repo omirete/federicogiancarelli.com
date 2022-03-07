@@ -208,6 +208,13 @@ $utilities: map-merge(
   transition: all 0.2s ease-in-out;
 }
 
+.transition-all-500-ms-linear {
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
 .fill-inherit {
   fill: inherit;
 }

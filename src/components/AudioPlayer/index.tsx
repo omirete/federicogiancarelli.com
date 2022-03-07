@@ -1,4 +1,4 @@
-import { HTMLProps, useState } from 'react'
+import { HTMLProps } from 'react'
 import useAudio from './useAudio'
 import { ReactComponent as IconPlay } from 'assets/material/play_circle.svg'
 import { ReactComponent as IconPause } from 'assets/material/pause_circle.svg'
@@ -9,7 +9,8 @@ export interface AudioPlayerProps extends HTMLProps<HTMLDivElement> {
 }
 
 const PlayPauseButton: React.FC<{ audio: HTMLAudioElement }> = ({ audio }) => {
-  const [playing, setPlaying] = useState(false)
+  const playing = !audio.paused
+  
   const iconClasses =
     'd-block pointer-hover transition-all fill-white opacity-75 opacity-100-hover'
   const iconStyles = { width: '5ch', height: '5ch' }
@@ -18,10 +19,8 @@ const PlayPauseButton: React.FC<{ audio: HTMLAudioElement }> = ({ audio }) => {
       onClick={() => {
         if (playing) {
           audio.pause()
-          setPlaying(false)
         } else {
           audio.play()
-          setPlaying(true)
         }
       }}
     >
@@ -38,7 +37,8 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
   style,
   ...props
 }) => {
-  const [audio, progress] = useAudio(url)
+  const [audio, progress] = useAudio(url);
+  
   return (
     <div
       {...props}
@@ -65,7 +65,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
           style={{ minHeight: '7px', maxHeight: '21px' }}
         >
           <div
-            className="bg-dark"
+            className="bg-dark transition-all-500-ms-linear"
             style={{
               minHeight: '7px',
               maxHeight: '21px',
