@@ -1,3 +1,6 @@
-# Personal website - Federico Giancarelli
+# Personal website
+## federicogiancarelli.com
 
-Built with React and Bootstrap.
+Built with ❤️ using Typescript, React and Bootstrap and Sass.
+
+Feel free to use this as a template for your own site.
