@@ -64,7 +64,7 @@ const de: Lang = {
         Es gibt immer, eine simplere Art, die Sachen zu machen. Deswegen habe
         ich{" "}
         <a
-          href="https://automaticaconsultora.com"
+          href="https://automaticaconsultora.com/de"
           target="_blank"
           rel="noreferrer"
           className="link-dark"

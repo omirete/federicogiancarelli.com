@@ -64,7 +64,7 @@ const es: Lang = {
       <span>
         Siempre hay una manera más simple de hacer las cosas. Por eso comencé{" "}
         <a
-          href="https://automaticaconsultora.com"
+          href="https://automaticaconsultora.com/es"
           target="_blank"
           rel="noreferrer"
           className="link-dark"

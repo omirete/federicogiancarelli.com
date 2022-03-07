@@ -63,7 +63,7 @@ const en: Lang = {
       <span>
         There is always a simpler way of doing things. That is why I started{" "}
         <a
-          href="https://automaticaconsultora.com"
+          href="https://automaticaconsultora.com/en"
           target="_blank"
           rel="noreferrer"
           className="link-dark"
