@@ -10,7 +10,7 @@ import { ReactComponent as IconWorld } from "assets/twemoji/world.svg";
 const About: React.FC = () => {
   const lang = useContext(LangContext);
 
-  const iconStyles = { width: "2ch" };
+  const iconStyles = { width: "2ch", height: "2ch" };
   const aboutContent = [
     { icon: <IconFountain style={iconStyles} />, text: lang.text.about_1 },
     { icon: <IconBooks style={iconStyles} />, text: lang.text.about_2 },
