@@ -28,7 +28,7 @@ const en: Lang = {
     // about_6_extra: 'Durante un año viví en Stuttgart, Alemania, en donde estudié y trabajé para MAHLE, una empresa de la industria automotriz y otro en Suiza (Zúrich), en donde estudié y trabajé',
     url_recording: "recordings/en.m4a",
     url_linkedin: "https://www.linkedin.com/in/fgiancarelli/?locale=en_US",
-    url_automatica: "https://automaticaconsultora.com/en",
+    url_automatica: "https://automatica.com.ar/en",
     url_tuturno: "https://tuturno.com.ar",
     url_cv: "CV/Federico_Giancarelli_English.pdf",
     download_my_cv: "Download my CV",
@@ -63,7 +63,7 @@ const en: Lang = {
       <span>
         There is always a simpler way of doing things. That is why I started{" "}
         <a
-          href="https://automaticaconsultora.com/en"
+          href="https://automatica.com.ar/en"
           target="_blank"
           rel="noreferrer"
           className="link-dark"

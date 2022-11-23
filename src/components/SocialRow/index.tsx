@@ -39,7 +39,7 @@ const SocialRow: React.FC<SocialRowProps> = ({ iconClassName, ...props }) => {
     },
     {
       description: "mail",
-      href: "mailto:federico@automaticaconsultora.com",
+      href: "mailto:federico@automatica.com.ar",
       icon: <IconMail style={iconStyles} />,
     },
   ];

@@ -28,7 +28,7 @@ const es: Lang = {
     // about_6_extra: 'Durante un año viví en Stuttgart, Alemania, en donde estudié y trabajé para MAHLE, una empresa de la industria automotriz y otro en Suiza (Zúrich), en donde estudié y trabajé',
     url_recording: "recordings/es.m4a",
     url_linkedin: "https://www.linkedin.com/in/fgiancarelli/?locale=es_ES",
-    url_automatica: "https://automaticaconsultora.com/es",
+    url_automatica: "https://automatica.com.ar/es",
     url_tuturno: "https://tuturno.com.ar",
     url_cv: "CV/Federico_Giancarelli_Español.pdf",
     download_my_cv: "Descarga mi CV",
@@ -64,7 +64,7 @@ const es: Lang = {
       <span>
         Siempre hay una manera más simple de hacer las cosas. Por eso comencé{" "}
         <a
-          href="https://automaticaconsultora.com/es"
+          href="https://automatica.com.ar/es"
           target="_blank"
           rel="noreferrer"
           className="link-dark"
