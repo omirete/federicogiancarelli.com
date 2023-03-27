@@ -1,4 +1,6 @@
-# Personal website
+
+
+# Personal website (deprecated in favor of [the new version](https://github.com/omirete/personal-site) with SSR and other magic tricks)
 
 ## federicogiancarelli.com
 
